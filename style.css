@@ -1,0 +1,140 @@
+/*@mixin circles($widthbrds) {
+  -webkit-border-radius:$widthbrds;
+  -moz-border-radius:$widthbrds;
+  border-radius:$widthbrds;
+}*/
+/*@mixin efectover($depinde) {
+  if $depinde == da {
+  background: $hoveru;
+  border-color: #fff;
+  cursor: pointer;
+} else if $depinde == nu {
+  background: $second-color;
+  border-color: $base-color;
+  cursor: help;
+}
+}*/
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 100px solid #eba84b;
+  margin: 30px auto; }
+
+.triangle:hover {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 100px solid #257121;
+  margin: 30px auto;
+  cursor: help; }
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: "Segoe UI", sans-serif; }
+
+/*.triangle:hover {
+  background: $hoveru;
+}*/
+.circle {
+  width: 300px;
+  height: 300px;
+  background: #3f4662;
+  border: 10px solid #eba84b;
+  -webkit-border-radius: 300px;
+  -moz-border-radius: 300px;
+  border-radius: 300px;
+  margin: 30px auto; }
+
+.circle:hover {
+  background: #00aec3;
+  border-color: #fff;
+  cursor: pointer; }
+
+.dreptunghi {
+  background: #3f4662;
+  max-width: 500px;
+  height: 130px;
+  margin: 30px auto; }
+
+.dreptunghi:hover {
+  background: #00aec3;
+  border-color: #fff;
+  cursor: pointer; }
+
+.box, .top {
+  background: #1f6235;
+  font-size: 23px;
+  text-align: right;
+  margin: 50px auto; }
+
+.top {
+  width: 750px;
+  height: 250px;
+  display: block; }
+
+.ceva, .altceva {
+  width: 400px;
+  height: 300px;
+  background-color: #3f4662;
+  margin: 100px auto 30px;
+  /*padding-bottom:red($base-color) + 100*/
+  /*@include marginb;*/
+  padding: 30px;
+  color: white;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px; }
+  .ceva span, .altceva span {
+    font-size: 24px;
+    margin-bottom: 30px;
+    display: block; }
+    .ceva span a, .altceva span a {
+      color: #ffd800;
+      font-size: inherit;
+      text-decoration: none; }
+    .ceva span :hover, .altceva span :hover {
+      color: #4cff00;
+      text-transform: uppercase; }
+
+.ceva:hover, .altceva:hover {
+  background-color: #8d74c6;
+  cursor: pointer;
+  color: #000; }
+
+.altceva {
+  margin-left: 100px;
+  margin-top: 20px; }
+  .altceva span a {
+    color: #ff0000; }
+  .altceva span a:hover {
+    text-transform: none; }
+
+.ceva2 {
+  width: 400px;
+  height: 300px;
+  background-color: rgba(141, 116, 198, 0.5);
+  margin: 30px auto;
+  /*@include marginb(50px);*/
+  padding: 30px;
+  color: #000;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px; }
+
+.ceva2:hover {
+  background-color: #495172;
+  cursor: pointer;
+  color: white; }
+
+.message, .error {
+  border: 1px solid #ccc; }
+
+.error {
+  border-color: red; }
+
+/*# sourceMappingURL=style.css.map */
