@@ -80,12 +80,12 @@ $hoveru: #00aec3;
 }*/
 
 .triangle {
-  @include triangle(200px, sus, $second-color);
+  @include triangle(200px, sus, #ff0000);
   margin: $marginall
 }
 
 .triangle:hover {
-  @include triangle(200px, sus, #257121);
+  @include triangle(200px, sus, #fff900);
   margin: $marginall;
   cursor: help;
 }
