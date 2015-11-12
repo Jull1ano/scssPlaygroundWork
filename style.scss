@@ -81,11 +81,11 @@ $hoveru: #00aec3;
 
 .triangle {
   @include triangle(200px, sus, $second-color);
-  margin: $marginall
+  margin: $marginall;
 }
 
 .triangle:hover {
-  @include triangle(200px, sus, $base-color);
+  @include triangle(210px, sus, $base-color);
   margin: $marginall;
   cursor: help;
 }
