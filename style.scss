@@ -1,3 +1,5 @@
+@import "mixins";
+
 $margin: 30px;
 $width: 400px;
 $height: 300px;
@@ -12,82 +14,13 @@ $marginall: 30px auto;
 $split: 1;
 $hoveru: #00aec3;
 
-@mixin borderradius($radius: 50px) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  border-radius: $radius;
-}
-
-@mixin marginb($margine: 10px) {
-  margin: $margine $margine + 40px $margine + 10px $margine + 20px;
-}
-
-@mixin center($max-width) {
-  max-width: $max-width;
-  width: 100%;
-  background-color: #1f6235;
-  margin: 30px auto;
-}
-
-/*@mixin circles($widthbrds) {
-  -webkit-border-radius:$widthbrds;
-  -moz-border-radius:$widthbrds;
-  border-radius:$widthbrds;
-}*/
-@mixin triangle($width1, $directie, $col1) {
-  @if $directie == sus {
-    width: 0;
-    height: 0;
-    border-left: $width1/2 solid transparent;
-    border-right: $width1/2 solid transparent;
-    border-bottom: $width1/2 solid $col1;
-  } @else if $directie == jos {
-    width: 0;
-    height: 0;
-    border-left: $width1 solid transparent;
-    border-right: $width1 solid transparent;
-    border-top: $width1 solid $col1;
-  }
-}
-
-@mixin cercdefinitie($hwcc, $colorcerc, $bordercerc) {
-  width: $hwcc;
-  height: $hwcc;
-  background: $colorcerc;
-  border: $bordercerc;
-  -webkit-border-radius: $hwcc / $split;
-  -moz-border-radius: $hwcc / $split;
-  border-radius: $hwcc / $split;
-
-}
-
-@mixin efectover() {
-  background: $hoveru;
-  border-color: #fff;
-  cursor: pointer;
-}
-
-/*@mixin efectover($depinde) {
-  if $depinde == da {
-  background: $hoveru;
-  border-color: #fff;
-  cursor: pointer;
-} else if $depinde == nu {
-  background: $second-color;
-  border-color: $base-color;
-  cursor: help;
-}
-}*/
-
 .triangle {
   @include triangle(200px, sus, $second-color);
   margin: $marginall;
-}
-
-.triangle:hover {
-  @include triangle(200px, sus, $base-color);
-  margin: $marginall;
-  cursor: help;
+  &:hover {
+    @include triangle(200px, sus, $base-color);
+    cursor: help;
+  }
 }
 
 body {
@@ -104,10 +37,9 @@ body {
 .circle {
   @include cercdefinitie(300px, $base-color, 10px solid $second-color);
   margin: $marginall;
-}
-
-.circle:hover {
-  @include efectover
+  &:hover {
+    @include efectover
+  }
 }
 
 .dreptunghi {
@@ -115,10 +47,9 @@ body {
   max-width: 500px;
   height: 130px;
   margin: $marginall;
-}
-
-.dreptunghi:hover {
-  @include efectover
+  &:hover {
+    @include efectover
+  }
 }
 
 .box {
@@ -144,6 +75,11 @@ body {
   padding: $pad;
   color: invert($color);
   @include borderradius;
+  &:hover {
+    background-color: adjust-color($base-color, $lightness: 20%, $hue: 30%, $saturation: 20%);
+    cursor: $pointer;
+    color: ($color);
+  }
 
   span {
     font-size: 24px;
@@ -154,19 +90,13 @@ body {
       color: #ffd800;
       font-size: inherit;
       text-decoration: none;
+      &:hover {
+        color: #fff;
+        font-weight: bold;
+      }
     }
 
-    :hover {
-      color: #4cff00;
-      text-transform: uppercase;
-    }
   }
-}
-
-.ceva:hover {
-  background-color: adjust-color($base-color, $lightness: 30%, $hue: 30%, $saturation: 20%);
-  cursor: $pointer;
-  color: ($color);
 }
 
 .altceva {
@@ -194,12 +124,11 @@ body {
   padding: $pad;
   color: ($color);
   @include borderradius(15px);
-}
-
-.ceva2:hover {
-  background-color: lighten($base-color, 5%);
-  cursor: $pointer;
-  color: invert($color);
+  &:hover {
+    background-color: lighten($base-color, 5%);
+    cursor: $pointer;
+    color: invert($color);
+  }
 }
 
 .message {

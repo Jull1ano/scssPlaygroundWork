@@ -21,15 +21,13 @@
   border-right: 100px solid transparent;
   border-bottom: 100px solid #eba84b;
   margin: 30px auto; }
-
-.triangle:hover {
-  width: 0;
-  height: 0;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-bottom: 100px solid #3f4662;
-  margin: 30px auto;
-  cursor: help; }
+  .triangle:hover {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 100px solid #3f4662;
+    cursor: help; }
 
 body {
   margin: 0;
@@ -49,22 +47,20 @@ body {
   -moz-border-radius: 300px;
   border-radius: 300px;
   margin: 30px auto; }
-
-.circle:hover {
-  background: #00aec3;
-  border-color: #fff;
-  cursor: pointer; }
+  .circle:hover {
+    background: #00aec3;
+    border-color: #fff;
+    cursor: pointer; }
 
 .dreptunghi {
   background: #3f4662;
   max-width: 500px;
   height: 130px;
   margin: 30px auto; }
-
-.dreptunghi:hover {
-  background: #00aec3;
-  border-color: #fff;
-  cursor: pointer; }
+  .dreptunghi:hover {
+    background: #00aec3;
+    border-color: #fff;
+    cursor: pointer; }
 
 .box, .top {
   background: #1f6235;
@@ -89,6 +85,10 @@ body {
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   border-radius: 50px; }
+  .ceva:hover, .altceva:hover {
+    background-color: #6f50b7;
+    cursor: pointer;
+    color: #000; }
   .ceva span, .altceva span {
     font-size: 24px;
     margin-bottom: 30px;
@@ -97,14 +97,9 @@ body {
       color: #ffd800;
       font-size: inherit;
       text-decoration: none; }
-    .ceva span :hover, .altceva span :hover {
-      color: #4cff00;
-      text-transform: uppercase; }
-
-.ceva:hover, .altceva:hover {
-  background-color: #8d74c6;
-  cursor: pointer;
-  color: #000; }
+      .ceva span a:hover, .altceva span a:hover {
+        color: #fff;
+        font-weight: bold; }
 
 .altceva {
   margin-left: 100px;
@@ -125,11 +120,10 @@ body {
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px; }
-
-.ceva2:hover {
-  background-color: #495172;
-  cursor: pointer;
-  color: white; }
+  .ceva2:hover {
+    background-color: #495172;
+    cursor: pointer;
+    color: white; }
 
 .message, .error {
   border: 1px solid #ccc; }
