@@ -1,0 +1,72 @@
+@mixin borderradius($radius: 50px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin marginb($margine: 10px) {
+  margin: $margine $margine + 40px $margine + 10px $margine + 20px;
+}
+
+@mixin center($max-width) {
+  max-width: $max-width;
+  width: 100%;
+  background-color: #1f6235;
+  margin: 30px auto;
+}
+
+@mixin max-wid($maw, $miw) {
+  max-width: $maw;
+  min-width: $miw;
+  margin: 30px auto;
+}
+
+/*@mixin circles($widthbrds) {
+  -webkit-border-radius:$widthbrds;
+  -moz-border-radius:$widthbrds;
+  border-radius:$widthbrds;
+}*/
+@mixin triangle($width1, $directie, $col1) {
+  @if $directie == sus {
+    width: 0;
+    height: 0;
+    border-left: $width1/2 solid transparent;
+    border-right: $width1/2 solid transparent;
+    border-bottom: $width1/2 solid $col1;
+  } @else if $directie == jos {
+    width: 0;
+    height: 0;
+    border-left: $width1 solid transparent;
+    border-right: $width1 solid transparent;
+    border-top: $width1 solid $col1;
+  }
+}
+
+@mixin cercdefinitie($hwcc, $colorcerc, $bordercerc) {
+  width: $hwcc;
+  height: $hwcc;
+  background: $colorcerc;
+  border: $bordercerc;
+  -webkit-border-radius: $hwcc / $split;
+  -moz-border-radius: $hwcc / $split;
+  border-radius: $hwcc / $split;
+
+}
+
+@mixin efectover() {
+  background: $hoveru;
+  border-color: #fff;
+  cursor: pointer;
+}
+
+/*@mixin efectover($depinde) {
+  if $depinde == da {
+  background: $hoveru;
+  border-color: #fff;
+  cursor: pointer;
+} else if $depinde == nu {
+  background: $second-color;
+  border-color: $base-color;
+  cursor: help;
+}
+}*/

@@ -1,0 +1,18 @@
+/*@mixin circles($widthbrds) {
+  -webkit-border-radius:$widthbrds;
+  -moz-border-radius:$widthbrds;
+  border-radius:$widthbrds;
+}*/
+/*@mixin efectover($depinde) {
+  if $depinde == da {
+  background: $hoveru;
+  border-color: #fff;
+  cursor: pointer;
+} else if $depinde == nu {
+  background: $second-color;
+  border-color: $base-color;
+  cursor: help;
+}
+}*/
+
+/*# sourceMappingURL=mixins.css.map */
