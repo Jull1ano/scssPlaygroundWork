@@ -1,3 +1,4 @@
+@import "Font-Awesome/scss/font-awesome";
 @import "mixins";
 
 $margin: 30px;
@@ -138,4 +139,43 @@ body {
 .error {
   @extend .message;
   border-color: red;
+}
+
+$whico: 32px;
+
+$iconite: (twitter, facebook, youtube, rss);
+@each $icoane in $iconite {
+  .#{$icoane} {
+    background: url(img/#{$icoane}.png) 0 0 no-repeat;
+  }
+}
+
+.social-links {
+  @include max-wid(900px, 360px);
+  border: 1px solid #ccc;
+  display: block;
+  height: $whico*2;
+  vertical-align: middle;
+
+  li {
+    list-style: none;
+    float: left;
+
+    a {
+      display: inline-block;
+      margin: ($whico - 20px) 20px 0 0;
+      padding: 0 0 0 40px;
+      width: $whico+50px;
+      height: $whico;
+      color: #2a485e;
+      text-decoration: none;
+      &:hover {
+        color: #00b3ee;
+      }
+
+    }
+    i {
+      float: left;
+    }
+  }
 }
