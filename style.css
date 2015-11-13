@@ -2141,7 +2141,7 @@ body {
     color: white; }
 
 .message, .error {
-  border: 1px solid #ccc; }
+  border: 2px solid #ccc; }
 
 .error {
   border-color: red; }
