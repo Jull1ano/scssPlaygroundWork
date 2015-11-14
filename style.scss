@@ -1,5 +1,5 @@
-@import "Font-Awesome/scss/font-awesome";
-@import "mixins";
+//@import "Font-Awesome/scss/font-awesome";
+//@import "mixins";
 
 $margin: 30px;
 $width: 400px;
@@ -14,6 +14,84 @@ $ft: "Segoe UI", sans-serif;
 $marginall: 30px auto;
 $split: 1;
 $hoveru: #00aec3;
+
+@mixin borderradius($radius: 50px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin marginb($margine: 10px) {
+  margin: $margine $margine + 40px $margine + 10px $margine + 20px;
+}
+
+@mixin center($max-width) {
+  max-width: $max-width;
+  width: 100%;
+  background-color: #1f6235;
+  margin: 30px auto;
+}
+
+@mixin max-wid($maw, $miw) {
+  max-width: $maw;
+  min-width: $miw;
+  margin: 30px auto;
+}
+
+@mixin triangle($width1, $directie, $col1) {
+  @if $directie == sus {
+    width: 0;
+    height: 0;
+    border-left: $width1/2 solid transparent;
+    border-right: $width1/2 solid transparent;
+    border-bottom: $width1/2 solid $col1;
+  } @else if $directie == jos {
+    width: 0;
+    height: 0;
+    border-left: $width1 solid transparent;
+    border-right: $width1 solid transparent;
+    border-top: $width1 solid $col1;
+  }
+}
+
+@mixin cercdefinitie($hwcc, $colorcerc, $bordercerc) {
+  width: $hwcc;
+  height: $hwcc;
+  background: $colorcerc;
+  border: $bordercerc;
+  -webkit-border-radius: $hwcc / $split;
+  -moz-border-radius: $hwcc / $split;
+  border-radius: $hwcc / $split;
+
+}
+
+@mixin efectover() {
+  background: $hoveru;
+  border-color: #fff;
+  cursor: pointer;
+}
+
+.incrementColor {
+  @include max-wid(1100px, 360px);
+
+  color: #fff;
+  padding: 30px;
+  font: 16px 'Segoe UI', sans-serif;
+  /*width: calc(100% - 60px);*/
+}
+
+$ccd: #d33a54;
+
+@each $p in (
+        unu $ccd,
+        doi $ccd - 25,
+        trei $ccd - 50,
+        patru $ccd - 75,
+) {
+  .#{nth($p, 1)} {
+    background: #{nth($p, 2)};
+  }
+}
 
 .triangle {
   @include triangle(200px, sus, $second-color);
@@ -52,11 +130,9 @@ body {
 }
 
 .clasa2 {
-  width: 50px;
-  height: 50px;
+  @extend .clasa1;
   background: #ff0000;
-  margin: 5px;
-  float: left;
+
 }
 
 .dreptunghi {
