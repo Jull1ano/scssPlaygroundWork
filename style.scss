@@ -43,6 +43,22 @@ body {
   }
 }
 
+.clasa1 {
+  width: 50px;
+  height: 50px;
+  background: #666;
+  margin: 5px;
+  float: left;
+}
+
+.clasa2 {
+  width: 50px;
+  height: 50px;
+  background: #ff0000;
+  margin: 5px;
+  float: left;
+}
+
 .dreptunghi {
   background: $base-color;
   max-width: 500px;

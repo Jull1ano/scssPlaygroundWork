@@ -2067,6 +2067,20 @@ body {
     border-color: #fff;
     cursor: pointer; }
 
+.clasa1 {
+  width: 50px;
+  height: 50px;
+  background: #666;
+  margin: 5px;
+  float: left; }
+
+.clasa2 {
+  width: 50px;
+  height: 50px;
+  background: #ff0000;
+  margin: 5px;
+  float: left; }
+
 .dreptunghi {
   background: #3f4662;
   max-width: 500px;

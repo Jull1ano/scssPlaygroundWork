@@ -5,16 +5,19 @@
     <title>Untitled Document Sass</title>
     <link href="style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
 
 </head>
 
 <body>
+
 <ul class="social-links clearfix">
-    <li><!--<i class="fa fa-twitter"></i>--><a href="" class="twitter">Twitter</a></li>
-    <li><!--<i class="fa fa-facebook"></i>--><a href="" class="facebook">Facebook</a></li>
-    <li><!--<i class="fa fa-youtube"></i>--><a href="" class="youtube">Youtube</a></li>
-    <li><!--<i class="fa fa-rss"></i>--><a href="" class="rss">RSS</a></li>
+    <li><i class="fa fa-camera-retro fa-2x"></i><a href="" class="twitter">Twitter</a></li>
+    <li><i class="fa fa-camera-retro fa-2x"></i><a href="" class="facebook">Facebook</a></li>
+    <li class="social"><i class="fa fa-camera-retro fa-2x"></i><a href="" class="youtube">Youtube</a></li>
+    <li class="social"><i class="fa fa-camera-retro fa-2x"></i><a href="" class="rss">RSS</a></li>
 </ul>
+
 <div class="triangle"></div>
 <div class="dreptunghi"></div>
 <div class="circle"></div>
@@ -38,7 +41,12 @@
     ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, suscipit, illo harum qui impedit laboriosam dolore
     eligendi molestias ullam inventore voluptatem numquam? Amet, maiores suscipit dolores repellat dolore rem enim! -
     cacamakax
-    </div>
+</div>
+
+<script>
+    $(".social i").removeClass("fa").removeClass("fa-camera-retro").removeClass("fa-2x").addClass("fa fa-twitter fa-2x");
+</script>
+
 
 </body>
 </html>
