@@ -1,23 +1,48 @@
+.unu {
+  background: #9b3940;
+  color: white; }
+
+.doi {
+  background: #b45259;
+  color: white; }
+
+.trei {
+  background: #cd6b72;
+  color: white; }
+
+.patru {
+  background: #ff9da4;
+  color: white; }
+
+.flt1-container {
+  max-width: 1440px;
+  min-width: 320px;
+  margin: 30px auto;
+  clear: both;
+  background: #f2f2f2;
+  margin: 60px auto;
+  position: relative;
+  top: -30px; }
+  .flt1-container div {
+    float: left; }
+
+.flt1 {
+  background: #003c72;
+  width: 61%;
+  color: #c8ffff; }
+
+.flt2 {
+  background: #fff180;
+  width: 39%; }
+
 .incrementColor {
-  max-width: 1100px;
+  max-width: 880px;
   min-width: 360px;
   margin: 30px auto;
-  color: #fff;
+  clear: both;
   padding: 30px;
   font: 16px 'Segoe UI', sans-serif;
   /*width: calc(100% - 60px);*/ }
-
-.unu {
-  background: #d33a54; }
-
-.doi {
-  background: #ba213b; }
-
-.trei {
-  background: #a10822; }
-
-.patru {
-  background: #880009; }
 
 .triangle {
   width: 0;
@@ -162,6 +187,7 @@ body {
   max-width: 900px;
   min-width: 360px;
   margin: 30px auto;
+  clear: both;
   border: 1px solid #ccc;
   display: block;
   height: 64px;

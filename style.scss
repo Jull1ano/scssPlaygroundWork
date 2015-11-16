@@ -33,6 +33,7 @@ $hoveru: #00aec3;
   max-width: $maw;
   min-width: $miw;
   margin: 30px auto;
+  clear: both;
 }
 
 @mixin triangle($width1, $directie, $col1) {
@@ -68,26 +69,58 @@ $hoveru: #00aec3;
   cursor: pointer;
 }
 
-.incrementColor {
-  @include max-wid(1100px, 360px);
-
-  color: #fff;
-  padding: 30px;
-  font: 16px 'Segoe UI', sans-serif;
-  /*width: calc(100% - 60px);*/
+@function text-contrast($bgclr) {
+  @if lightness($ccd) < 50% {
+    @return lighten($ccd, 70%);
+  } @else {
+    @return darken($ccd, 70%);
+  }
 }
 
-$ccd: #d33a54;
+$ccd: #9b3940;
 
 @each $p in (
         unu $ccd,
-        doi $ccd - 25,
-        trei $ccd - 50,
-        patru $ccd - 75,
+        doi $ccd + 25,
+        trei $ccd + 50,
+        patru $ccd + 100,
 ) {
   .#{nth($p, 1)} {
-    background: #{nth($p, 2)};
+    background: nth($p, 2);
+    color: text-contrast(nth($p, 2));
   }
+}
+
+.flt1-container {
+  @include max-wid(1440px, 320px);
+  background: #f2f2f2;
+  margin: 60px auto;
+  position: relative;
+  top: -30px;
+  div {
+    float: left;
+  }
+}
+
+$bg-dark-blue: #003c72;
+.flt1 {
+  background: $bg-dark-blue;
+  width: round(percentage(700px / 1140px));
+  //color: text-contrast($bg-dark-blue, 200);
+  color: $bg-dark-blue + 200;
+}
+
+.flt2 {
+  background: #fff180;
+  width: round(percentage(440px / 1140px));
+
+}
+
+.incrementColor {
+  @include max-wid(880px, 360px);
+  padding: 30px;
+  font: 16px 'Segoe UI', sans-serif;
+  /*width: calc(100% - 60px);*/
 }
 
 .triangle {
